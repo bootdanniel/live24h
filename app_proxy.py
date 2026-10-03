@@ -29,7 +29,9 @@ def get_live_url():
     return _cache["url"]
 
 
+@app.route("/stream.txt")
 @app.route("/stream.m3u8")
+@app.route("/")
 def proxy():
     live_url = get_live_url()
     if not live_url:
