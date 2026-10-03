@@ -66,11 +66,6 @@ def proxy():
         return f"Erro: {e}", 500
 
 
-@app.route("/")
-def home():
-    live_url = get_live_url()
-    return f"Proxy OK. Live atual: {live_url or 'indefinida'}"
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
